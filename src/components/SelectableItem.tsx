@@ -28,7 +28,7 @@ export default function SelectableItem({ id, content, title, icon }: SelectableI
                     </svg>
                 </div>
             </button>
-            <div class={`relative overflow-hidden transition-all duration-700 ${selected() === id ? 'max-h-screen' : 'max-h-0'}`}>
+            <div class={`relative w-full overflow-hidden transition-all duration-700 ${selected() === id ? 'h-auto opacity-100' : 'h-0 opacity-0'}`}>
                 <div class="py-4 px-2 text-text/60">
                     {content}
                 </div>
