@@ -12,7 +12,6 @@ interface SelectableItemProps {
 const [selected, setSelected] = createSignal<number | null>(null);
 
 export default function SelectableItemMultiple({ id, content, title, icon }: SelectableItemProps) {
-    console.log(content);
     return (
         <div class="grid grid-cols-1 grid-rows-1 place-items-start w-[98vw] max-w-2xl border-b border-[#f1fcfe4d] gap-5 px-2">
             <button
