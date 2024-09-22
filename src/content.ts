@@ -1,5 +1,5 @@
 // Personal Information --> #hero section
-export const name = "Rick van Assen | test naam"
+export const name = "Rick van Assen"
 export const designation = "Software / DevOps Engineer"
 export const location = "Hasselt, Overijssel, Nederland"
 export const pronouns = ""
