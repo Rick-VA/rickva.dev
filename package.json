@@ -12,6 +12,8 @@
     "astro-icon": "^1.1.1",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "bun": "^1.1.29",
+    "bun-types": "^1.1.29",
     "solid-js": "^1.8.20"
   },
   "devDependencies": {
