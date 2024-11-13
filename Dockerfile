@@ -4,7 +4,7 @@ WORKDIR /build
 
 COPY package*.json bun.lockb ./
 
-RUN bun install --production
+RUN bun install
 
 COPY . .
 
@@ -19,4 +19,4 @@ WORKDIR /app
 # Copy both server and client assets
 COPY --from=builder /build/.output ./out
 
-CMD ["out/server/index.mjs"]
+CMD ["./server/index.mjs"]
