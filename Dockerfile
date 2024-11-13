@@ -19,4 +19,4 @@ WORKDIR /app
 # Copy both server and client assets
 COPY --from=builder /build/.output ./out
 
-CMD ["./server/index.mjs"]
+CMD ["out/server/index.mjs"]
