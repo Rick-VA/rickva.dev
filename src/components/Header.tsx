@@ -1,4 +1,4 @@
-import * as data from '../content.ts'
+import * as data from '../content'
 
 export default function Header() {
     return (

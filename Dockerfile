@@ -1,23 +1,22 @@
-# Base image for Bun (official Bun image)
-FROM oven/bun:latest
+FROM oven/bun:1.1.34 AS builder
 
-# Set working directory inside the container
-WORKDIR /app
+WORKDIR /build
 
-# Copy package.json and bun.lockb files
-COPY package.json bun.lockb ./
+COPY package*.json bun.lockb ./
 
-# Install dependencies using Bun
-RUN bun install
+RUN bun install --production
 
-# Copy the rest of the application code to the container
 COPY . .
 
-# Build the Vite project
+ENV COMPATIBILITY_DATE=2024-11-13
+
 RUN bun run build
 
-# Expose the port (Vite typically serves on port 3000)
-EXPOSE 5173
+FROM oven/bun:1.1.34-distroless AS production
 
-# Run the Vite project in production mode
-CMD ["bun", "vite", "--host"]
+WORKDIR /app
+
+# Copy both server and client assets
+COPY --from=builder /build/.output ./out
+
+CMD ["out/server/index.mjs"]
