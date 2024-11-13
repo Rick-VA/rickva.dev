@@ -1,6 +1,6 @@
-import * as data from '../content.ts';
-import SelectableItem from './SelectableItem.tsx';
-import SelectableItemMultiple from './SelectableItemMultiple.tsx';
+import * as data from '../content';
+import SelectableItem from './SelectableItem';
+import SelectableItemMultiple from './SelectableItemMultiple';
 
 export default function Container() {
 

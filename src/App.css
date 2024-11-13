@@ -1,4 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-    color: #f1fcfe99!important;
-    font-family: Manrope,sans-serif!important;
-  }
+  color: #f1fcfe99!important;
+  font-family: Manrope,sans-serif!important;
+}

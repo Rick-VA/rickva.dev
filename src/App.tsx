@@ -1,17 +1,18 @@
-import './App.css'
-import Container from './components/Container'
-import Footer from './components/Footer'
-import Header from './components/Header'
+import { Router } from "@solidjs/router";
+import { FileRoutes } from "@solidjs/start/router";
+import { Suspense } from "solid-js";
+import "./app.css";
 
-function App() {
-
+export default function App() {
   return (
-    <>
-      <Header />
-      <Container />
-      <Footer />
-    </>
-  )
+    <Router
+      root={props => (
+        <>
+          <Suspense>{props.children}</Suspense>
+        </>
+      )}
+    >
+      <FileRoutes />
+    </Router>
+  );
 }
-
-export default App
