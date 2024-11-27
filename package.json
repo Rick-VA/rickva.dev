@@ -21,5 +21,8 @@
   },
   "engines": {
     "bun": ">=1.1.29"
+  },
+  "devDependencies": {
+    "daisyui": "^4.12.14"
   }
 }
