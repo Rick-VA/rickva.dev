@@ -12,7 +12,7 @@ ENV COMPATIBILITY_DATE=2024-11-13
 
 RUN bun run build
 
-FROM oven/bun:1.1.34-distroless AS production
+FROM oven/bun:1.1.40-distroless AS production
 
 WORKDIR /app
 
