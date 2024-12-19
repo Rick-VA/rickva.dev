@@ -1,22 +1,22 @@
-FROM oven/bun:1.1.34 AS builder
+FROM node:current-bookworm AS builder
 
 WORKDIR /build
 
-COPY package*.json bun.lockb ./
+COPY package*.json ./
 
-RUN bun install
+RUN npm ci
 
 COPY . .
 
 ENV COMPATIBILITY_DATE=2024-11-13
 
-RUN bun run build
+RUN npm run build
 
-FROM oven/bun:1.1.40-distroless AS production
+FROM denoland/deno:distroless-2.1.4 AS production
 
 WORKDIR /app
 
 # Copy both server and client assets
 COPY --from=builder /build/.output ./out
 
-CMD ["out/server/index.mjs"]
+CMD ["--allow-env", "--allow-net", "--allow-read", "out/server/index.mjs"]
