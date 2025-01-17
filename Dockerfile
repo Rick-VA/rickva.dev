@@ -12,7 +12,7 @@ ENV COMPATIBILITY_DATE=2024-11-13
 
 RUN npm run build
 
-FROM denoland/deno:distroless-2.1.5 AS production
+FROM denoland/deno:distroless-2.1.6 AS production
 
 WORKDIR /app
 
