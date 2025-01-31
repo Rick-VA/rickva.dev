@@ -1,3 +1,5 @@
+import { differenceInYears } from "date-fns"
+
 // Personal Information --> #hero section
 export const name = "Rick van Assen"
 export const designation = "Software / DevOps Engineer"
@@ -5,8 +7,9 @@ export const location = "Hasselt, Overijssel, Nederland"
 export const pronouns = ""
 export const website = "https://rickva.dev"
 
+const age = differenceInYears(Date.now(), "2005-02-07")
 // About
-export const about = "Hallo, mijn naam is Rick van Assen, 19 jaar oud en op dit moment werk ik als Software / DevOps Engineer bij brainhive. In mijn vrije tijd programmeer ik graag, speel ik games, doe ik windsurfen en ga ik graag uit met vrienden."
+export const about = `Hallo, mijn naam is Rick van Assen, ${age} jaar oud en op dit moment werk ik als Software / DevOps Engineer bij brainhive. In mijn vrije tijd programmeer ik graag, speel ik games, doe ik windsurfen en ga ik graag uit met vrienden.`
 
 // Work Experience --> #work section
 export const work = [
