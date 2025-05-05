@@ -21,6 +21,6 @@
     "bootstrap": "^5.3.3"
   },
   "devDependencies": {
-    "daisyui": "^4.12.14"
+    "daisyui": "^5.0.35"
   }
 }
