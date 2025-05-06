@@ -19,8 +19,5 @@
     "vinxi": "^0.5.1",
     "bootstrap-icons": "^1.11.3",
     "bootstrap": "^5.3.3"
-  },
-  "devDependencies": {
-    "daisyui": "^4.12.14"
   }
 }
