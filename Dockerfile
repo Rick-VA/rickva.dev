@@ -8,11 +8,11 @@ RUN npm ci
 
 COPY . .
 
-ENV COMPATIBILITY_DATE=2025-02-01
+ENV COMPATIBILITY_DATE=2025-05-06
 
 RUN npm run build
 
-FROM denoland/deno:distroless-2.2.10 AS production
+FROM denoland/deno:distroless-2.3.1 AS production
 
 WORKDIR /app
 
