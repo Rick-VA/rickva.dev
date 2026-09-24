@@ -29,4 +29,5 @@ jobs:
           BUILD_EVENTS_TARGET: urn:brainpod:pod:${{ secrets.BRAINPOD_POD_ID }}
         with:
           cmd: build
+          builders: railpack
           args: --repo=registry.brainpod.io/experts-tan
